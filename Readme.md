@@ -2,7 +2,7 @@
 
 先看一下帧数据结构
 
-![img](file:////private/var/folders/j8/6sgvpp850l38kj2v82cgnmwm0000gn/T/com.kingsoft.wpsoffice.mac/wps-racerz/ksohtml//wps1.jpg) 
+![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps1.jpg) 
 
 明文结构如下:
 
@@ -38,7 +38,7 @@ def find():
 
 PS：对于扩展欧几里得算法递归式思路，[如图所示](https://www.cnblogs.com/fusiwei/p/11775503.html)
 
-![img](file:////private/var/folders/j8/6sgvpp850l38kj2v82cgnmwm0000gn/T/com.kingsoft.wpsoffice.mac/wps-racerz/ksohtml//wps2.jpg) 
+![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps2.jpg) 
 
 代码见 `code/commons_attack.py`	 
 
@@ -64,17 +64,17 @@ $$
 
 结果如下：
 
-![img](file:////private/var/folders/j8/6sgvpp850l38kj2v82cgnmwm0000gn/T/com.kingsoft.wpsoffice.mac/wps-racerz/ksohtml//wps15.jpg) 
+![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps15.jpg) 
 
 **4.** **费马分解法 Frame 10**
 
-![img](file:////private/var/folders/j8/6sgvpp850l38kj2v82cgnmwm0000gn/T/com.kingsoft.wpsoffice.mac/wps-racerz/ksohtml//wps16.jpg)
+![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps16.jpg)
 
 代码见 `code/fermat_factor.py`
 
 结果如下:
 
-![img](file:////private/var/folders/j8/6sgvpp850l38kj2v82cgnmwm0000gn/T/com.kingsoft.wpsoffice.mac/wps-racerz/ksohtml//wps17.jpg) 
+![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps17.jpg) 
 
 **5.** Pollard p-1 分解法 Frame 2 6 19
 
@@ -84,16 +84,17 @@ $$
 
 算法步骤：
 
-![img](file:////private/var/folders/j8/6sgvpp850l38kj2v82cgnmwm0000gn/T/com.kingsoft.wpsoffice.mac/wps-racerz/ksohtml//wps19.jpg) 
+![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps19.jpg) 
 
 代码见 `code/Pollard.py`
 
 结果如下：
 
-![img](file:////private/var/folders/j8/6sgvpp850l38kj2v82cgnmwm0000gn/T/com.kingsoft.wpsoffice.mac/wps-racerz/ksohtml//wps20.jpg) 
+![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps20.jpg) 
 
 最终仍有5个Frame无法恢复，分别是5,9,13,14,17
 
 通过猜测获得最终明文：
 
 > "My secret is a famous saying of Albert Einstein. That is \\"Logic will get you from A to B. Imagination will take you everywhere.\\""
+
