@@ -2,7 +2,7 @@
 
 先看一下帧数据结构
 
-![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps1.jpg) 
+![img](Readme/wps1.jpg) 
 
 明文结构如下:
 
@@ -38,7 +38,7 @@ def find():
 
 PS：对于扩展欧几里得算法递归式思路，[如图所示](https://www.cnblogs.com/fusiwei/p/11775503.html)
 
-![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps2.jpg) 
+![img](Readme/wps2.jpg) 
 
 代码见 `code/commons_attack.py`	 
 
@@ -46,12 +46,9 @@ PS：对于扩展欧几里得算法递归式思路，[如图所示](https://www.
 
 **2.** **Low Private Exponent 低加密指数攻击**
 
-原理：假设所有的加密指数 $e_i$ 都等于3. 一个简单的论证表明，如果 $k \geq 3$，Marvin 便可以恢复M。实际上，Marvin 得到 $C_1,C_2,C_3$，其中
+原理：假设所有的加密指数 $e_i$ 都等于3. 一个简单的论证表明，如果 $k \geq 3$，Marvin 便可以恢复M。实际上，Marvin 得到 $C_1,C_2,C_3$，其中 $
+C_1=M^3 \ mod\ N_1, \ \ C_2=M^3 \ mod\ N_2, \ \ C_3=M^3 \ mod\ N_3$ 我们假设 $N_i$ 之间两两互素，否则的话 Marvin 便可以直接因式分解其中的一些 $N_i$。利用 CRT，我们就可以得到一个 $C’ \in \Z_{N_1N_2N_3}$ 满足 $C’ = M^3 \ mod \ N_1N_2N_3$ . 因为M是小于所有 $N_i$ 的，因此 $M^3 < N_1N_2N_3$. 所以 $C’=M^3$ 遍历整数，Marvin 可以通过计算 $C’$ 的立方根来恢复M。更一般地说，如果所有公共指数都等于e，只需 $k \geq e$ ， Marvin 便可以恢复 M。只有当使用小 e 时，攻击才是可行的。
 $$
-C_1=M^3 \ mod\ N_1, \ \ C_2=M^3 \ mod\ N_2, \ \ C_3=M^3 \ mod\ N_3
-$$
-我们假设 $N_i$ 之间两两互素，否则的话 Marvin 便可以直接因式分解其中的一些 $N_i$。利用 CRT，我们就可以得到一个 $C’ \in \Z_{N_1N_2N_3}$ 满足 $C’ = M^3 \ mod \ N_1N_2N_3$ . 因为M是小于所有 $N_i$ 的，因此 $M^3 < N_1N_2N_3$. 所以 $C’=M^3$ 遍历整数，Marvin 可以通过计算 $C’$ 的立方根来恢复M。更一般地说，如果所有公共指数都等于e，只需 $k \geq e$ ， Marvin 便可以恢复 M。只有当使用小 e 时，攻击才是可行的。
-
 我们结合上述思路去做题。符合低加密指数的帧有Frame3 8 12 16 20
 
 代码见 `code/low_e.py`	
@@ -64,17 +61,17 @@ $$
 
 结果如下：
 
-![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps15.jpg) 
+![img](Readme/wps15.jpg) 
 
 **4.** **费马分解法 Frame 10**
 
-![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps16.jpg)
+![img](Readme/wps16.jpg)
 
 代码见 `code/fermat_factor.py`
 
 结果如下:
 
-![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps17.jpg) 
+![img](Readme/wps17.jpg) 
 
 **5.** Pollard p-1 分解法 Frame 2 6 19
 
@@ -84,13 +81,13 @@ $$
 
 算法步骤：
 
-![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps19.jpg) 
+![img](Readme/wps19.jpg) 
 
 代码见 `code/Pollard.py`
 
 结果如下：
 
-![img](/Users/racerz/Desktop/密码学/待解决的问题/RSA_homework/Readme/wps20.jpg) 
+![img](Readme/wps20.jpg) 
 
 最终仍有5个Frame无法恢复，分别是5,9,13,14,17
 
